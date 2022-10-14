@@ -1,7 +1,8 @@
 #include <iostream>
-
+#include "/Users/ammarmahmood/C-/C-/Project2/Headers/person.h"
 
 int main()
 {
-    std::cout<< "My name is Ammar " << '\n';
+    Person::Person p1{"Michael" , 23};
 }
+

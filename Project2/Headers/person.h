@@ -1,29 +1,29 @@
 #ifndef PERSON_H
 #define PERSON_H
 #include <string>
-#include<iostream>
 
-class Person
+namespace Person
 {
-private:
-    std::string name;
-    int age;
-public:
-    Person();
-    ~Person();
     
-    Person (std::string argname, int age);
-    Person (const Person& rhs);
-    Person& operator=(const Person& rhs);
-    Person(Person&& rhs);
-    Person& operator=(Person&& rhs);
+    class Person
+    {
+    private:
+        std::string name;
+        int age;
+    public:
+        Person();
+        virtual ~Person();
 
-    virtual void printnameandage();
-    virtual void setter();
-    
-    template<typename T>
-    T getter(T t);
-};
+        Person (const std::string& argname, int argage);
+        Person (const Person& rhs) = delete;
+        Person& operator=(const Person& rhs) = delete;
+        Person(Person&& rhs);
+        Person& operator=(Person&& rhs);
 
+        virtual void printnameandage();
+        std::string getname();
+        int getage();
+    };
+}
 
 #endif
