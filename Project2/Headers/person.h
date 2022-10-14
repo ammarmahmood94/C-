@@ -4,7 +4,6 @@
 
 namespace Person
 {
-    
     class Person
     {
     private:
@@ -21,8 +20,8 @@ namespace Person
         Person& operator=(Person&& rhs);
 
         virtual void printnameandage();
-        std::string getname();
-        int getage();
+        virtual std::string getname();
+        virtual int getage();
     };
 }
 

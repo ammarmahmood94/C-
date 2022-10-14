@@ -28,7 +28,6 @@ namespace Person
         return *this;
     }
     
-    
     void Person::printnameandage()
     {
         std::cout << "My name is : " << name << " and I am " << age << " years old." << '\n';
